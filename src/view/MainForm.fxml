@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainFormController">
+   <children>
+      <JFXTabPane prefHeight="400.0" prefWidth="650.0" stylesheets="@../assert/css/tabPane.css">
+         <tabs>
+            <Tab text="Read NIC">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <JFXTextField fx:id="txtNic" layoutX="202.0" layoutY="75.0" prefHeight="25.0" prefWidth="310.0" />
+                        <JFXRadioButton fx:id="rdOld" layoutX="169.0" layoutY="27.0" selected="true" text="Old ( 9 numbers )">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="nicType" />
+                           </toggleGroup>
+                        </JFXRadioButton>
+                        <JFXRadioButton fx:id="rdNew" layoutX="351.0" layoutY="27.0" selected="true" text="New ( 12 numbers )" toggleGroup="$nicType" />
+                        <Label layoutX="115.0" layoutY="85.0" prefHeight="17.0" prefWidth="87.0" text="NIC No       :">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblV" layoutX="519.0" layoutY="85.0" prefHeight="17.0" prefWidth="17.0" text="V" visible="false">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#36ff00" height="131.0" layoutX="34.0" layoutY="199.0" opacity="0.12" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="583.0" />
+                        <Label fx:id="lblDate" alignment="CENTER" layoutX="245.0" layoutY="230.0" prefHeight="21.0" prefWidth="24.0" text="08">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblMonth" alignment="CENTER" layoutX="271.0" layoutY="230.0" prefHeight="21.0" prefWidth="92.0" text="DECEMBER">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblYear" alignment="CENTER" layoutX="363.0" layoutY="230.0" prefHeight="21.0" prefWidth="43.0" text="2001">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblGender" alignment="CENTER" layoutX="278.0" layoutY="275.0" prefHeight="21.0" prefWidth="94.0" text="Male">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <JFXButton fx:id="btnRead" layoutX="243.0" layoutY="130.0" prefHeight="33.0" prefWidth="149.0" ripplerFill="WHITE" styleClass="buttonMenu" stylesheets="@../assert/css/css.css" text="Read Number" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="About Us">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+         </tabs>
+      </JFXTabPane>
+   </children>
+</AnchorPane>
